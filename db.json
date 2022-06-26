@@ -1,18 +1,20 @@
 {
-  "posts": [
+  "user": [
     {
       "id": 1,
-      "firstName": "Eduardo Alejandro",
-      "lastName": "Canche Sanchez",
-      "Email": "L18390004@chetumal.tecnm.mx",
+      "nombre": "Eduardo Alejandro",
+      "apellidos": "Canche Sanchez",
+      "email": "canchesanchez1@gmail.com",
+      "password": "123456",
       "Mobile": "984523654"
     },
     {
-      "firstName": "Alexander",
-      "lastName": "Ferraez",
-      "Email": "L18390004@chetumal.tecnm.mx",
-      "Mobile": "9831661448",
-      "id": 3
+      "id": 2,
+      "nombre": "Eduardo",
+      "apellidos": "Canche",
+      "email": "L18390004@chetumal.tecnm.mx",
+      "password": "",
+      "Mobile": "987453"
     }
   ]
 }

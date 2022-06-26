@@ -14,18 +14,18 @@
     <thead>
         <tr  class="bg-info text-white text-center">
           <th>ID</th>
-           <th>First Name</th>
-           <th>Last Name</th>
+           <th>Nombre</th>
+           <th>Apellidos</th>
            <th>Email</th>
-           <th>Mobile Number</th>
+           <th>Numero Telefono</th>
            <th>Action</th>
         </tr>        
 
         <tr *ngFor="let row of employeeData "  class="text-center">
           <td>{{row.id}}</td>
-          <td>{{row.firstName}}</td>
-          <td>{{row.lastName}}</td>
-          <td>{{row.Email}}</td>
+          <td>{{row.nombre}}</td>
+          <td>{{row.apellidos}}</td>
+          <td>{{row.email}}</td>
           <td>{{row.Mobile}}</td>
 <td class="text-right">  
   <button  (click)="updateEmployee(row)" class="btn btn-outline-info  pl-3 pr-3 mx-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-pencil"></i> Edit</button>
@@ -56,16 +56,16 @@
         <div class="modal-body">
             <form [formGroup]="formValue">
                 <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input formControlName="firstName"  id="firstName" class="form-control" placeholder="Enter First Name.." required> 
+                    <label for="nombre">First Name</label>
+                    <input formControlName="nombre"  id="nombre" class="form-control" placeholder="Enter First Name.." required> 
                 </div>
                 <div class="form-group">
-                    <label for="lastName" >Last Name</label>
-                    <input id="lastName" formControlName="lastName" type="text"  class="form-control" placeholder="Enter Last Name.." required> 
+                    <label for="apellidos" >Last Name</label>
+                    <input id="apellidos" formControlName="apellidos" type="text"  class="form-control" placeholder="Enter Last Name.." required> 
                 </div>
                 <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input id="Email" type="email" formControlName="Email" class="form-control" placeholder="Enter email.." required> <br>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" formControlName="email" class="form-control" placeholder="Enter email.." required> <br>
                 </div>
                 <div class="form-group">
                     <label for="Mobile">Mobile Number</label>

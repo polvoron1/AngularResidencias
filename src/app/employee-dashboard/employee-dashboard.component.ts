@@ -41,9 +41,9 @@ showAddTitle!:boolean;
 
   this.formValue=this.formBuilder.group({
 
-  firstName:[''],
-  lastName:[''],
-  Email:[''],
+  nombre:[''],
+  apellidos:[''],
+  email:[''],
   Mobile:[''],
       
     })  
@@ -53,9 +53,9 @@ this.getAllEmployee();
 postEmployeeDetails(){
 this.employeeModelObj.id=this.formValue.value.id ;
 
-  this.employeeModelObj.firstName=this.formValue.value.firstName;
-  this.employeeModelObj.lastName=this.formValue.value.lastName;
-  this.employeeModelObj.Email=this.formValue.value.Email;
+  this.employeeModelObj.nombre=this.formValue.value.nombre;
+  this.employeeModelObj.apellidos=this.formValue.value.apellidos;
+  this.employeeModelObj.email=this.formValue.value.email;
   this.employeeModelObj.Mobile=this.formValue.value.Mobile;
 
   let cancel=document.getElementById("cancel");
@@ -90,17 +90,17 @@ updateEmployee(row:any){
   this.showUpdateTitle=true;
   this.showAddTitle=false;
   this.employeeModelObj.id=row.id;
-  this.formValue.controls['firstName'].setValue(row.firstName);
-  this.formValue.controls['lastName'].setValue(row.lastName);
-  this.formValue.controls['Email'].setValue(row.Email);
+  this.formValue.controls['nombre'].setValue(row.nombre);
+  this.formValue.controls['apellidos'].setValue(row.apellidos);
+  this.formValue.controls['email'].setValue(row.email);
   this.formValue.controls['Mobile'].setValue(row.Mobile);
 }
 
 updateEmployeeDetails(){
 
-  this.employeeModelObj.firstName=this.formValue.value.firstName;
-  this.employeeModelObj.lastName=this.formValue.value.lastName;
-  this.employeeModelObj.Email=this.formValue.value.Email;
+  this.employeeModelObj.nombre=this.formValue.value.nombre;
+  this.employeeModelObj.apellidos=this.formValue.value.apellidos;
+  this.employeeModelObj.email=this.formValue.value.email;
   this.employeeModelObj.Mobile=this.formValue.value.Mobile;
   this.api.updateData(this.employeeModelObj,this.employeeModelObj.id).subscribe(a=>{
     alert("Record updated Succesfully");

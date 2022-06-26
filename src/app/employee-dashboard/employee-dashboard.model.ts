@@ -2,9 +2,10 @@ export class EmployeeModel{
 
     
  id :number=0;
- firstName:string='';
- lastName:string='';
- Email:string='';
+ nombre:string='';
+ apellidos:string='';
+ email:string='';
+ password:string='';
  Mobile:string='';
 
 
